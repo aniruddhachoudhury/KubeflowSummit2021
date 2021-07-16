@@ -24,6 +24,7 @@
 6. Kubernetes 1.18+
 7. KFServing 0.5+
 
+
 ## Building Real time Image classification with Kubeflow Orchestrator 
 ![](img.png)
 
@@ -50,6 +51,15 @@ my-kafka-cp-zookeeper-0   2/2     Running   0          127m
 - Install [Knative Eventing Core >= 0.18](https://knative.dev/docs/install/any-kubernetes-cluster/#installing-the-eventing-component)
 - Install [Kafka Event Source](https://github.com/knative-sandbox/eventing-kafka/releases).
 - Install `InferenceService` addressable cluster role
+
+```
+VERSION=v0.23.0
+kubectl apply --selector knative.dev/crd-install=true --filename https://github.com/knative/eventing/releases/download/$VERSION/eventing-crds.yaml
+kubectl apply -f https://github.com/knative/eventing/releases/download/$VERSION/eventing-core.yaml
+kubectl apply --filename https://github.com/knative/eventing/releases/download/$VERSION/eventing.yaml
+kubectl apply -f https://storage.googleapis.com/knative-releases/eventing-contrib/latest/kafka-source.yaml
+```
+
 ```bash
 kubectl apply -f addressable-resolver.yaml
 ```
