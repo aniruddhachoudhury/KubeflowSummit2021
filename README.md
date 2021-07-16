@@ -116,4 +116,18 @@ kafkasource-kafka-source-3d809fe2-1267-11ea-99d0-42010af00zbn5h   1/1     Runnin
 The last step is to upload the image `images/flower.jpg`, image then should be moved to the classified bucket based on the prediction response!
 ```bash
 mc cp images/flower.jpg myminio/rawimage
+```
+## Launch grafana dashboard
+### KNATIVE MONOTORING
+```bash
+#create namespace
+kubectl create namespace knative-monitoring
+#setup monitoring components
+kubectl apply  --filename https://github.com/knative/serving/releases/download/v0.13.0/monitoring-metrics-prometheus.yaml
+```
+
+```bash
+# use port-forcd warding
+kubectl port-forward --namespace knative-monitoring $(kubectl get pod --namespace knative-monitoring --selector="app=grafana" --output jsonpath='{.items[0].metadata.name}') 8080:3000
+```
 
