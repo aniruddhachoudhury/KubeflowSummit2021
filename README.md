@@ -118,7 +118,7 @@ The last step is to upload the image `images/flower.jpg`, image then should be m
 mc cp images/flower.jpg myminio/rawimage
 ```
 ## Launch grafana dashboard
-### KNATIVE MONOTORING
+### Knative Monitoring
 ```bash
 #create namespace
 kubectl create namespace knative-monitoring
