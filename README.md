@@ -109,7 +109,7 @@ This creates the kafka source pod which consumers the events from `realtime` top
 ```bash
 kafkasource-kafka-source-3d809fe2-1267-11ea-99d0-42010af00zbn5h   1/1     Running   0          8h
 ```
-## Upload a flower image to Minio RawImamge bucket
+## Upload a flower image to Minio RawImage bucket
 The last step is to upload the image `images/flower.jpg`, image then should be moved to the classified bucket based on the prediction response!
 ```bash
 mc cp images/flower.jpg myminio/rawimage
