@@ -21,8 +21,8 @@
 3. Install Minio with following Minio deploy step.
 4. Use existing Kafka cluster or install Kafka on your cluster with [Confluent helm chart](https://www.confluent.io/blog/getting-started-apache-kafka-kubernetes/).
 5. Install [Kafka Event Source](https://github.com/knative-sandbox/eventing-kafka/tree/main/pkg/source).
-6. Kubernetes 1.15+
-7. KFServing 0.3+
+6. Kubernetes 1.18+
+7. KFServing 0.5+
 
 ## Building Real time Image classification with Kubeflow Orchestrator 
 ![](img.png)
