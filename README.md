@@ -1,8 +1,5 @@
 # Kubeflow AutoML and Training Summit 2021
 
-
-
-
 ![](logo.png)
 
 
@@ -118,6 +115,7 @@ The last step is to upload the image `images/flower.jpg`, image then should be m
 mc cp images/flower.jpg myminio/rawimage
 ```
 ## Launch grafana dashboard
+![](grafana.png)
 ### Knative Monitoring
 ```bash
 #create namespace
