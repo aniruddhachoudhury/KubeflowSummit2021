@@ -94,6 +94,7 @@ mc event add myminio/rawimage arn:minio:sqs:us-east-1:1:kafka -p --event put --s
 ```
 
 ## Create the InferenceService
+![](serving.png)
 Specify the built image on `Transformer` spec and apply the inference service CRD.
 ```bash
 cd pipeline/SERVING
